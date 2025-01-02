@@ -16,6 +16,7 @@ const Register = () => {
   const [isAdmin, setIsAdmin] = useState(null);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     let userRole = sessionStorage.getItem("user_role")
     console.log(userRole,"Userrole");
@@ -81,7 +82,7 @@ const Register = () => {
     }
   };
 
-  return isAdmin ? (
+  return  isAdmin ?(
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">Register</h1>
@@ -181,7 +182,7 @@ const Register = () => {
       </div>
       <ToastContainer />
     </div>
-  ):(<></>);
+  ):(<></>)
 };
 
 export default Register;
